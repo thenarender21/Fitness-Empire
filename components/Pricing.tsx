@@ -6,7 +6,7 @@ export default function Pricing() {
   const plans = [
     {
       name: 'Monthly',
-      price: '$49',
+      price: '₹3,999',
       period: '/month',
       description: 'Perfect for trying out our gym',
       popular: false,
@@ -21,7 +21,7 @@ export default function Pricing() {
     },
     {
       name: 'Quarterly',
-      price: '$129',
+      price: '₹10,499',
       period: '/3 months',
       description: 'Most popular - save 15%',
       popular: true,
@@ -38,7 +38,7 @@ export default function Pricing() {
     },
     {
       name: 'Yearly',
-      price: '$499',
+      price: '₹39,999',
       period: '/year',
       description: 'Best value - save 25%',
       popular: false,
