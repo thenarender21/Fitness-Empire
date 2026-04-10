@@ -25,21 +25,23 @@ export default function SocialProof() {
   ]
 
   return (
-    <section className="bg-navy-800 py-16 px-4 border-y border-red-primary/20">
+    <section className="bg-surface py-10 px-4 border-y border-line">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
-              <div key={index} className="text-center hover:transform hover:scale-105 transition-transform duration-300">
-                <div className="flex justify-center mb-4">
-                  <div className="p-4 bg-red-primary/10 rounded-full border border-red-primary/30">
-                    <Icon className="w-8 h-8 text-red-primary" />
+              <div key={index} className="flex items-center justify-center gap-4">
+                <div className="flex justify-center">
+                  <div className="p-3 bg-[color:var(--color-accent-soft)] rounded-lg border border-line">
+                    <Icon className="w-6 h-6 text-accent" />
                   </div>
                 </div>
-                <h3 className="text-4xl font-bold text-gold-primary mb-2">{stat.value}</h3>
-                <p className="text-gray-light font-semibold text-lg">{stat.label}</p>
-                <p className="text-gray-light/70 text-sm mt-1">{stat.subtext}</p>
+                <div className="text-left">
+                  <p className="text-2xl font-semibold text-charcoal leading-none">{stat.value}</p>
+                  <p className="text-sm text-charcoal font-medium mt-1">{stat.label}</p>
+                  <p className="text-sm text-muted">{stat.subtext}</p>
+                </div>
               </div>
             )
           })}

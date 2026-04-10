@@ -43,14 +43,14 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-20 px-4 bg-navy-800">
+    <section id="services" className="py-20 px-4 section-punch">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
-            Our Premium <span className="text-red-primary">Services</span>
+          <p className="text-xs tracking-[0.24em] uppercase font-medium text-charcoal/60 mb-4">Programs</p>
+          <h2 className="font-display text-charcoal mb-4 text-balance">
+            Built for strength, conditioning, and consistency.
           </h2>
-          <div className="h-1 w-20 bg-gold-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-light max-w-3xl mx-auto">
+          <p className="text-lg text-muted max-w-3xl mx-auto">
             Comprehensive fitness solutions tailored to your unique goals and lifestyle.
           </p>
         </div>
@@ -61,21 +61,21 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className="bg-navy-900 border border-red-primary/20 rounded-xl p-8 hover:border-red-primary/60 transition-all duration-300 hover:shadow-lg hover:shadow-red-primary/20 group"
+                className="bg-surface border border-line rounded-xl p-8 hover:border-accent/40 transition-colors duration-300 group"
               >
-                <div className="p-4 bg-red-primary/10 rounded-lg w-fit mb-6 group-hover:bg-red-primary/20 transition-colors">
-                  <Icon className="w-8 h-8 text-red-primary" />
+                <div className="p-4 bg-[color:var(--color-accent-soft)] rounded-lg w-fit mb-6 group-hover:bg-[color:var(--color-accent-soft)] transition-colors">
+                  <Icon className="w-8 h-8 text-accent" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-light mb-6 leading-relaxed">{service.description}</p>
+                <h3 className="font-display text-2xl text-charcoal mb-3">{service.title}</h3>
+                <p className="text-muted mb-6 leading-relaxed">{service.description}</p>
 
-                <div className="border-t border-red-primary/10 pt-6">
-                  <p className="text-gold-primary font-semibold text-sm mb-4">Key Benefits:</p>
+                <div className="border-t border-line pt-6">
+                  <p className="text-xs tracking-[0.22em] uppercase font-medium text-charcoal/60 mb-4">Key benefits</p>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, i) => (
-                      <li key={i} className="text-gray-light/80 flex items-center gap-2 text-sm">
-                        <span className="w-1.5 h-1.5 bg-gold-primary rounded-full"></span>
+                      <li key={i} className="text-muted flex items-center gap-2 text-sm">
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full"></span>
                         {benefit}
                       </li>
                     ))}

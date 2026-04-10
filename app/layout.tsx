@@ -1,10 +1,19 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Oswald } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const display = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-display',
+})
+
+const sans = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-sans',
+})
 
 export const metadata: Metadata = {
   title: 'Fitness Empire - Premium Gym & Fitness Training',
@@ -36,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
-      <body className="font-sans antialiased bg-navy-900 text-gray-light">
+      <body className={`${sans.variable} ${display.variable} font-sans antialiased bg-white text-charcoal`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

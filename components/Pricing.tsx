@@ -58,15 +58,15 @@ export default function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-20 px-4 bg-navy-800">
+    <section id="pricing" className="py-20 px-4 bg-paper">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
-            Transparent <span className="text-red-primary">Pricing</span>
+          <p className="text-xs tracking-[0.24em] uppercase font-medium text-charcoal/60 mb-4">Pricing</p>
+          <h2 className="font-display text-charcoal mb-4 text-balance">
+            Transparent pricing, clear value.
           </h2>
-          <div className="h-1 w-20 bg-gold-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-light max-w-3xl mx-auto">
-            Choose the perfect plan for your fitness journey. No hidden fees, cancel anytime.
+          <p className="text-lg text-muted max-w-3xl mx-auto">
+            Choose a plan that fits your schedule. Simple inclusions, no surprises.
           </p>
         </div>
 
@@ -74,45 +74,45 @@ export default function Pricing() {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
+              className={`relative rounded-xl overflow-hidden transition-all duration-300 bg-surface border ${
                 plan.popular
-                  ? 'ring-2 ring-red-primary shadow-2xl shadow-red-primary/30 scale-105 md:scale-100'
-                  : 'border border-red-primary/20'
-              } hover:shadow-lg`}
+                  ? 'border-accent'
+                  : 'border-line'
+              }`}
             >
               {plan.popular && (
-                <div className="absolute top-0 left-0 right-0 bg-red-primary text-white text-center py-2 font-bold text-sm">
-                  MOST POPULAR
+                <div className="absolute top-0 left-0 right-0 bg-accent text-white text-center py-2 text-xs tracking-[0.22em] uppercase font-medium">
+                  Most popular
                 </div>
               )}
 
-              <div className={`p-8 ${plan.popular ? 'bg-navy-700 pt-14' : 'bg-navy-900'}`}>
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-light/70 text-sm mb-6">{plan.description}</p>
+              <div className={`p-8 ${plan.popular ? 'pt-14' : ''}`}>
+                <h3 className="font-display text-2xl text-charcoal mb-2">{plan.name}</h3>
+                <p className="text-muted text-sm mb-6">{plan.description}</p>
 
                 <div className="mb-8">
-                  <span className="text-5xl font-bold text-gold-primary">{plan.price}</span>
-                  <span className="text-gray-light text-sm">{plan.period}</span>
+                  <span className="text-5xl font-semibold text-charcoal">{plan.price}</span>
+                  <span className="text-muted text-sm">{plan.period}</span>
                 </div>
 
                 <a
                   href="#contact"
-                  className={`w-full py-3 rounded-lg font-bold transition-all duration-300 text-center block mb-8 ${
+                  className={`w-full py-3 rounded-md font-medium transition-colors text-center block mb-8 ${
                     plan.popular
-                      ? 'bg-red-primary hover:bg-red-dark text-white transform hover:scale-105'
-                      : 'border-2 border-red-primary text-red-primary hover:bg-red-primary/10'
+                      ? 'bg-accent hover:bg-accent-hover text-white'
+                      : 'border border-line text-charcoal hover:bg-paper'
                   }`}
                 >
-                  Get Started
+                  Book a tour
                 </a>
 
-                <div className="border-t border-red-primary/20 pt-8">
-                  <p className="text-gold-primary font-semibold text-sm mb-4">Features:</p>
+                <div className="border-t border-line pt-8">
+                  <p className="text-xs tracking-[0.22em] uppercase font-medium text-charcoal/60 mb-4">Includes</p>
                   <ul className="space-y-4">
                     {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-3 text-gray-light">
-                        <Check size={20} className="text-red-primary flex-shrink-0 mt-0.5" />
-                        <span>{feature}</span>
+                      <li key={i} className="flex items-start gap-3 text-charcoal">
+                        <Check size={18} className="text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-charcoal">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -124,14 +124,11 @@ export default function Pricing() {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
-          <p className="text-gray-light text-lg mb-6">
-            Not sure which plan is right for you? Schedule a consultation with our fitness experts!
-          </p>
           <a
             href="#contact"
-            className="inline-block px-10 py-4 bg-gold-primary hover:bg-gold-dark text-navy-900 font-bold rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-4 bg-charcoal text-white hover:bg-charcoal/90 rounded-md transition-colors font-medium"
           >
-            Get Free Consultation
+            Talk to a coach
           </a>
         </div>
       </div>

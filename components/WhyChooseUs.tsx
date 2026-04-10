@@ -32,13 +32,16 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section id="why-us" className="py-20 px-4 bg-navy-900">
+    <section id="why-us" className="py-20 px-4 section-surface">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
-            Why Choose <span className="text-gold-primary">Fitness Empire</span>?
+          <p className="text-xs tracking-[0.24em] uppercase font-medium text-charcoal/60 mb-4">Why us</p>
+          <h2 className="font-display text-charcoal mb-4 text-balance">
+            Designed for consistency — not motivation.
           </h2>
-          <div className="h-1 w-20 bg-red-primary mx-auto"></div>
+          <p className="text-lg text-muted max-w-3xl mx-auto">
+            Professional coaching, flexible access, and an environment that keeps you moving.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -47,17 +50,17 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={index}
-                className="flex gap-6 p-8 bg-navy-800 rounded-xl border border-gold-primary/20 hover:border-gold-primary/60 transition-all duration-300 group"
+                className="flex gap-6 p-8 bg-paper rounded-xl border border-line hover:border-accent/40 transition-colors duration-300 group"
               >
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-red-primary/10 group-hover:bg-red-primary/20 transition-colors">
-                    <Icon className="w-7 h-7 text-red-primary" />
+                  <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-[color:var(--color-accent-soft)] transition-colors">
+                    <Icon className="w-7 h-7 text-accent" />
                   </div>
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-light/80 leading-relaxed">{benefit.description}</p>
+                  <h3 className="font-display text-xl text-charcoal mb-2">{benefit.title}</h3>
+                  <p className="text-muted leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
             )
@@ -65,16 +68,16 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center p-12 bg-gradient-to-r from-red-primary/10 to-gold-primary/10 rounded-xl border border-red-primary/30">
-          <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Life?</h3>
-          <p className="text-gray-light text-lg mb-8 max-w-2xl mx-auto">
+        <div className="mt-16 text-center p-12 bg-charcoal rounded-xl">
+          <h3 className="font-display text-3xl text-white mb-4">Ready to Transform Your Life?</h3>
+          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
             Join hundreds of members who have already achieved their fitness goals at Fitness Empire.
           </p>
           <a
             href="#contact"
-            className="inline-block px-10 py-4 bg-red-primary hover:bg-red-dark text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="inline-block px-8 py-4 bg-accent hover:bg-accent-hover text-white font-medium text-base rounded-md transition-colors"
           >
-            Start Your Transformation Today
+            Book a tour
           </a>
         </div>
       </div>

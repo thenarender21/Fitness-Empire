@@ -8,20 +8,19 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
+    { name: 'Programs', href: '#services' },
     { name: 'Why Us', href: '#why-us' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Tour', href: '#contact' },
   ]
 
   return (
-    <nav className="fixed top-0 w-full bg-navy-800 border-b border-red-primary/20 z-50">
+    <nav className="fixed top-0 w-full bg-surface/85 backdrop-blur border-b border-line z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="#" className="text-2xl font-bold text-gold-primary hover:text-gold-light transition-colors">
-            FITNESS EMPIRE
+          <Link href="#" className="font-display tracking-tight text-xl text-charcoal hover:text-accent transition-colors">
+            Fitness Empire
           </Link>
 
           {/* Desktop Navigation */}
@@ -30,7 +29,7 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-light hover:text-gold-primary transition-colors text-sm font-medium"
+                className="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors"
               >
                 {item.name}
               </a>
@@ -41,15 +40,15 @@ export default function Navbar() {
           <div className="hidden md:flex">
             <a
               href="#contact"
-              className="px-6 py-2 bg-red-primary hover:bg-red-dark text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="px-5 py-2 rounded-md bg-accent text-white hover:bg-accent-hover transition-colors font-medium"
             >
-              Join Now
+              Book a tour
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-light hover:text-gold-primary"
+            className="md:hidden text-charcoal hover:text-accent"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -58,13 +57,13 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-navy-700 border-t border-red-primary/20">
+          <div className="md:hidden bg-surface border-t border-line">
             <div className="px-4 py-4 space-y-3">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block text-gray-light hover:text-gold-primary transition-colors text-sm font-medium py-2"
+                  className="block text-charcoal/80 hover:text-charcoal transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -72,10 +71,10 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="block w-full text-center px-4 py-2 bg-red-primary hover:bg-red-dark text-white font-semibold rounded-lg transition-all"
+                className="block w-full text-center px-4 py-2 bg-accent hover:bg-accent-hover text-white font-medium rounded-md transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Join Now
+                Book a tour
               </a>
             </div>
           </div>
