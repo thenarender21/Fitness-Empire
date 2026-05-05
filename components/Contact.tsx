@@ -28,165 +28,165 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-4 bg-paper">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.24em] uppercase font-medium text-charcoal/60 mb-4">Book a tour</p>
-          <h2 className="font-display text-charcoal mb-4 text-balance">
-            Visit the gym. Meet the coaches.
+    <section id="contact" className="py-24 px-4 bg-surface relative overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 pointer-events-none mix-blend-overlay"></div>
+      <div className="absolute -left-1/4 -bottom-1/4 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-3 mb-4 justify-center">
+             <span className="w-8 h-[2px] bg-accent"></span>
+             <p className="text-xs tracking-[0.3em] uppercase font-semibold text-accent">Take Action</p>
+             <span className="w-8 h-[2px] bg-accent"></span>
+          </div>
+          <h2 className="font-display text-ivory mb-6 text-4xl md:text-5xl font-bold">
+            Your Move.
           </h2>
-          <p className="text-lg text-muted max-w-3xl mx-auto">
-            Tell us your goal and preferred time — we’ll confirm your tour and share the best plan.
+          <p className="text-lg text-muted max-w-2xl mx-auto">
+            Drop your details below. One of our elite coaches will reach out to discuss your goals and schedule a private facility tour.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-10">
             <div>
-              <h3 className="font-display text-2xl text-charcoal mb-8">Contact</h3>
+              <h3 className="font-display text-3xl text-ivory mb-8 font-semibold">Headquarters</h3>
             </div>
 
-            <div className="flex gap-4">
-              <div className="p-4 bg-surface border border-line rounded-lg h-fit">
+            <div className="flex gap-6 group">
+              <div className="p-4 bg-paper border border-ivory/5 rounded-xl h-fit group-hover:border-accent/30 transition-colors">
                 <MapPin className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <h4 className="text-lg font-medium text-charcoal mb-2">Location</h4>
+                <h4 className="text-lg font-semibold text-ivory mb-2">Location</h4>
                 <p className="text-muted leading-relaxed">
-                  123 Fitness Street<br />
-                  Gym District, City 12345<br />
-                  United States
+                  Manorama Nagar Rd, opposite state bank of India<br />
+                  Dokali Pada, Dhokali, Thane West<br />
+                  Thane, Maharashtra 400607
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <div className="p-4 bg-surface border border-line rounded-lg h-fit">
+            <div className="flex gap-6 group">
+              <div className="p-4 bg-paper border border-ivory/5 rounded-xl h-fit group-hover:border-accent/30 transition-colors">
                 <Phone className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <h4 className="text-lg font-medium text-charcoal mb-2">Phone</h4>
+                <h4 className="text-lg font-semibold text-ivory mb-2">Direct Line</h4>
                 <a
-                  href="tel:+1234567890"
-                  className="text-charcoal hover:text-accent transition-colors text-lg font-medium"
+                  href="tel:09773329211"
+                  className="text-muted hover:text-accent transition-colors font-medium"
                 >
-                  +1 (234) 567-890
+                  097733 29211
                 </a>
-                <p className="text-muted text-sm mt-1">Available during business hours</p>
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <div className="p-4 bg-surface border border-line rounded-lg h-fit">
+            <div className="flex gap-6 group">
+              <div className="p-4 bg-paper border border-ivory/5 rounded-xl h-fit group-hover:border-accent/30 transition-colors">
                 <Mail className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <h4 className="text-lg font-medium text-charcoal mb-2">Email</h4>
+                <h4 className="text-lg font-semibold text-ivory mb-2">Email</h4>
                 <a
-                  href="mailto:hello@fitnessempire.com"
-                  className="text-charcoal hover:text-accent transition-colors"
+                  href="mailto:elite@fitnessempire.com"
+                  className="text-muted hover:text-accent transition-colors font-medium"
                 >
-                  hello@fitnessempire.com
+                  elite@fitnessempire.com
                 </a>
               </div>
             </div>
 
-            <div className="flex gap-4">
-              <div className="p-4 bg-surface border border-line rounded-lg h-fit">
+            <div className="flex gap-6 group">
+              <div className="p-4 bg-paper border border-ivory/5 rounded-xl h-fit group-hover:border-accent/30 transition-colors">
                 <Clock className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <h4 className="text-lg font-medium text-charcoal mb-2">Hours</h4>
-                <p className="text-muted">
-                  Monday - Friday: 5:00 AM - 11:00 PM<br />
-                  Saturday - Sunday: 6:00 AM - 10:00 PM<br />
-                  <span className="text-charcoal font-medium">24/7 Member Access</span>
+                <h4 className="text-lg font-semibold text-ivory mb-2">Hours of Operation</h4>
+                <p className="text-muted leading-relaxed">
+                  Monday - Saturday: 5:30 AM - 10:30 PM<br />
+                  Sunday: 8:00 AM - 1:00 PM<br />
+                  <span className="text-accent font-semibold mt-2 block">24/7 Keycard Access for Members</span>
                 </p>
               </div>
             </div>
-
-            {/* WhatsApp CTA */}
-            <a
-              href="https://wa.me/1234567890?text=Hi%20Fitness%20Empire%2C%20I%27m%20interested%20in%20joining%21"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-charcoal hover:bg-charcoal/90 text-white font-medium rounded-md transition-colors mt-4"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.533.867-2.582 2.112-2.82 3.506-.238 1.394.068 2.887.71 4.117.19.442.424 1.025.928 1.529.438.438 1.088.778 1.529.982.663.304 1.428.408 2.165.408.552 0 1.1-.082 1.629-.248 1.486-.38 2.744-1.198 3.374-2.473.32-.647.484-1.42.484-2.236 0-.955-.23-1.852-.768-2.555-.538-.703-1.386-1.266-2.4-1.506-.622-.15-1.293-.158-1.98.038" />
-              </svg>
-              WhatsApp us to book
-            </a>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-surface rounded-xl p-8 border border-line">
-            <h3 className="font-display text-2xl text-charcoal mb-6">Request a tour</h3>
+          <div className="bg-paper/80 backdrop-blur-md rounded-2xl p-10 border border-ivory/5 shadow-2xl relative">
+            <h3 className="font-display text-3xl text-ivory mb-8 font-semibold">Initiate Contact</h3>
 
             {submitted && (
-              <div className="mb-6 p-4 bg-[color:var(--color-accent-soft)] border border-line rounded-lg">
-                <p className="text-charcoal font-medium">Thank you — we&apos;ll get back to you shortly.</p>
+              <div className="mb-8 p-6 bg-accent/10 border border-accent/20 rounded-xl">
+                <p className="text-accent font-semibold flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Message received. A coach will be in touch shortly.
+                </p>
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-charcoal font-medium mb-2">Full Name</label>
+                <label className="block text-ivory/80 font-medium mb-2 text-sm uppercase tracking-wider">Full Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white border border-line text-charcoal rounded-lg focus:outline-none focus:border-accent transition-colors"
-                  placeholder="Your name"
+                  className="w-full px-5 py-4 bg-surface border border-ivory/10 text-ivory rounded-xl focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                  placeholder="John Doe"
                 />
               </div>
 
-              <div>
-                <label className="block text-charcoal font-medium mb-2">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-white border border-line text-charcoal rounded-lg focus:outline-none focus:border-accent transition-colors"
-                  placeholder="your.email@example.com"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-ivory/80 font-medium mb-2 text-sm uppercase tracking-wider">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-5 py-4 bg-surface border border-ivory/10 text-ivory rounded-xl focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                    placeholder="john@example.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-ivory/80 font-medium mb-2 text-sm uppercase tracking-wider">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-5 py-4 bg-surface border border-ivory/10 text-ivory rounded-xl focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                    placeholder="(555) 000-0000"
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="block text-charcoal font-medium mb-2">Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white border border-line text-charcoal rounded-lg focus:outline-none focus:border-accent transition-colors"
-                  placeholder="(123) 456-7890"
-                />
-              </div>
-
-              <div>
-                <label className="block text-charcoal font-medium mb-2">Goal</label>
+                <label className="block text-ivory/80 font-medium mb-2 text-sm uppercase tracking-wider">Your Goal</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white border border-line text-charcoal rounded-lg focus:outline-none focus:border-accent transition-colors resize-none"
-                  placeholder="Your goal, preferred time, and any questions…"
+                  rows={4}
+                  className="w-full px-5 py-4 bg-surface border border-ivory/10 text-ivory rounded-xl focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none"
+                  placeholder="Tell us what you want to achieve..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 bg-accent hover:bg-accent-hover text-white font-medium rounded-md transition-colors"
+                className="w-full py-5 mt-4 bg-accent hover:bg-accent-hover text-ivory font-bold tracking-widest uppercase rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(217,119,6,0.2)] hover:shadow-[0_0_30px_rgba(217,119,6,0.4)] transform hover:-translate-y-1"
               >
-                Submit request
+                Submit Request
               </button>
             </form>
           </div>

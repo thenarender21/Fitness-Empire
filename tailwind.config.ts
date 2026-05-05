@@ -10,6 +10,7 @@ const config = {
   theme: {
     extend: {
       colors: {
+        ivory: 'var(--color-ivory)',
         charcoal: 'var(--color-charcoal)',
         paper: 'var(--color-paper)',
         surface: 'var(--color-surface)',

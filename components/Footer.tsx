@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
@@ -13,71 +12,28 @@ export default function Footer() {
   ]
 
   const quickLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'The Standard', href: '#about' },
+    { name: 'Arsenal', href: '#services' },
+    { name: 'Evidence', href: '#gallery' },
+    { name: 'Access', href: '#pricing' },
+    { name: 'Initiate Contact', href: '#contact' },
   ]
 
   return (
-    <footer className="bg-navy-800 border-t border-red-primary/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-surface border-t border-ivory/5 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold text-gold-primary mb-4">EMPIRE</h3>
-            <p className="text-gray-light/80 leading-relaxed">
-              Transforming lives through fitness, one member at a time. Join our community of champions today.
+          <div className="lg:col-span-1">
+            <div className="font-display tracking-widest text-3xl text-ivory uppercase font-bold flex items-center gap-2 mb-6">
+              <div className="w-8 h-8 bg-accent rotate-45 flex items-center justify-center">
+                <div className="w-3 h-3 bg-paper"></div>
+              </div>
+              <span>Empire</span>
+            </div>
+            <p className="text-muted leading-relaxed mb-8">
+              More than a gym. A standard of excellence. We provide the tools, you provide the work.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-gray-light hover:text-red-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-6">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Phone size={18} className="text-red-primary flex-shrink-0 mt-1" />
-                <a href="tel:+1234567890" className="text-gray-light hover:text-red-primary transition-colors">
-                  +1 (234) 567-890
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={18} className="text-red-primary flex-shrink-0 mt-1" />
-                <a href="mailto:hello@fitnessempire.com" className="text-gray-light hover:text-red-primary transition-colors">
-                  hello@fitnessempire.com
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-red-primary flex-shrink-0 mt-1" />
-                <span className="text-gray-light">
-                  123 Fitness Street<br />
-                  Gym District, City 12345
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h4 className="text-lg font-bold text-white mb-6">Follow Us</h4>
             <div className="flex gap-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon
@@ -85,7 +41,7 @@ export default function Footer() {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="p-3 bg-red-primary/10 text-red-primary rounded-lg hover:bg-red-primary hover:text-white transition-all duration-300"
+                    className="p-3 bg-paper border border-ivory/5 text-muted rounded-xl hover:bg-accent hover:border-accent hover:text-ivory transition-all duration-300"
                     title={social.label}
                   >
                     <Icon size={20} />
@@ -94,20 +50,78 @@ export default function Footer() {
               })}
             </div>
           </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-sm tracking-[0.2em] uppercase font-semibold text-ivory mb-8">Navigation</h4>
+            <ul className="space-y-4">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-muted hover:text-accent transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-0 h-[1px] bg-accent group-hover:w-4 transition-all duration-300"></span>
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="lg:col-span-2">
+            <h4 className="text-sm tracking-[0.2em] uppercase font-semibold text-ivory mb-8">Headquarters</h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <li className="flex items-start gap-4">
+                <div className="p-3 bg-paper border border-ivory/5 rounded-lg text-accent">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted mb-1 font-semibold">Direct Line</p>
+                  <a href="tel:09773329211" className="text-ivory hover:text-accent transition-colors font-medium">
+                    097733 29211
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="p-3 bg-paper border border-ivory/5 rounded-lg text-accent">
+                  <Mail size={18} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted mb-1 font-semibold">Email</p>
+                  <a href="mailto:elite@fitnessempire.com" className="text-ivory hover:text-accent transition-colors font-medium break-all">
+                    elite@fitnessempire.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4 sm:col-span-2">
+                <div className="p-3 bg-paper border border-ivory/5 rounded-lg text-accent">
+                  <MapPin size={18} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted mb-1 font-semibold">Location</p>
+                  <span className="text-ivory">
+                    Manorama Nagar Rd, opposite state bank of India, Dokali Pada, Dhokali, Thane West, Thane, Maharashtra 400607
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-red-primary/20 pt-8">
+        <div className="border-t border-line py-8 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-light/70 text-sm">
-              © {currentYear} Fitness Empire. All rights reserved.
+            <p className="text-muted text-sm font-medium">
+              © {currentYear} Fitness Empire. Built for Thane.
             </p>
-            <div className="flex gap-6">
-              <a href="#" className="text-gray-light/70 hover:text-gray-light text-sm transition-colors">
-                Privacy Policy
+            <div className="flex gap-8">
+              <a href="#" className="text-muted hover:text-accent text-sm font-medium transition-colors">
+                Privacy Protocol
               </a>
-              <a href="#" className="text-gray-light/70 hover:text-gray-light text-sm transition-colors">
-                Terms of Service
+              <a href="#" className="text-muted hover:text-accent text-sm font-medium transition-colors">
+                Terms of Membership
               </a>
             </div>
           </div>

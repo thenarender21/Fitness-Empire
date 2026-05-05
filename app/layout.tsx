@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Oswald } from 'next/font/google'
+import { Inter, Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const display = Oswald({
+const display = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-display',
 })
 
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ scrollBehavior: 'smooth' }}>
-      <body className={`${sans.variable} ${display.variable} font-sans antialiased bg-white text-charcoal`}>
+      <body className={`${sans.variable} ${display.variable} font-sans antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

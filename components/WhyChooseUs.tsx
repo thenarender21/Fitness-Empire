@@ -6,60 +6,66 @@ export default function WhyChooseUs() {
   const benefits = [
     {
       icon: Award,
-      title: 'Expert Certified Trainers',
-      description: 'Our team consists of internationally certified fitness professionals with years of hands-on experience.',
+      title: 'World-Class Expertise',
+      description: 'Our coaching staff is hand-picked. Internationally certified, constantly educating themselves, and proven by results.',
     },
     {
       icon: Clock,
-      title: '24/7 Access & Flexibility',
-      description: 'Work out on your schedule with 24/7 facility access. We fit your lifestyle, not the other way around.',
+      title: 'Unrestricted Access',
+      description: 'Your goals don\'t care about business hours. Train 24/7 in a secure, fully-equipped environment.',
     },
     {
       icon: TrendingUp,
-      title: 'Proven Results',
-      description: 'Our members see measurable results within weeks. Join 500+ members who have transformed their bodies.',
+      title: 'Data-Driven Results',
+      description: 'We don\'t guess. We track metrics, adjust protocols, and guarantee measurable progression.',
     },
     {
       icon: Users,
-      title: 'Supportive Community',
-      description: 'Be part of a welcoming, inclusive community that motivates and supports your fitness journey.',
+      title: 'An Elite Circle',
+      description: 'Surround yourself with individuals who demand more from themselves. The energy here is contagious.',
     },
     {
       icon: CheckCircle,
-      title: 'Premium Facilities',
-      description: 'State-of-the-art equipment, spotless facilities, and a motivating atmosphere designed for success.',
+      title: 'Uncompromised Standards',
+      description: 'Immaculate facilities. Top-tier machinery. We handle the environment; you handle the work.',
     },
   ]
 
   return (
-    <section id="why-us" className="py-20 px-4 section-surface">
-      <div className="max-w-7xl mx-auto">
+    <section id="why-us" className="py-24 px-4 bg-surface relative">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <p className="text-xs tracking-[0.24em] uppercase font-medium text-charcoal/60 mb-4">Why us</p>
-          <h2 className="font-display text-charcoal mb-4 text-balance">
-            Designed for consistency — not motivation.
+          <div className="inline-flex items-center gap-3 mb-4 justify-center">
+             <span className="w-8 h-[2px] bg-accent"></span>
+             <p className="text-xs tracking-[0.3em] uppercase font-semibold text-accent">The Thane Standard</p>
+             <span className="w-8 h-[2px] bg-accent"></span>
+          </div>
+          <h2 className="font-display text-ivory mb-4 text-4xl md:text-5xl font-bold">
+            Built for those who <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-hover">Refuse to Settle.</span>
           </h2>
-          <p className="text-lg text-muted max-w-3xl mx-auto">
-            Professional coaching, flexible access, and an environment that keeps you moving.
+          <p className="text-lg text-muted max-w-2xl mx-auto">
+            We removed the distractions so you can focus entirely on your progression.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon
             return (
               <div
                 key={index}
-                className="flex gap-6 p-8 bg-paper rounded-xl border border-line hover:border-accent/40 transition-colors duration-300 group"
+                className="flex flex-col gap-6 p-8 bg-paper/50 backdrop-blur-md rounded-2xl border border-ivory/5 hover:border-accent/40 transition-all duration-300 group"
               >
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-14 w-14 rounded-lg bg-[color:var(--color-accent-soft)] transition-colors">
-                    <Icon className="w-7 h-7 text-accent" />
+                  <div className="flex items-center justify-center h-16 w-16 rounded-xl bg-surface border border-ivory/5 group-hover:border-accent/30 transition-colors">
+                    <Icon className="w-8 h-8 text-accent" />
                   </div>
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="font-display text-xl text-charcoal mb-2">{benefit.title}</h3>
+                  <h3 className="font-display text-2xl text-ivory mb-3 font-semibold">{benefit.title}</h3>
                   <p className="text-muted leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
@@ -68,17 +74,20 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center p-12 bg-charcoal rounded-xl">
-          <h3 className="font-display text-3xl text-white mb-4">Ready to Transform Your Life?</h3>
-          <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-            Join hundreds of members who have already achieved their fitness goals at Fitness Empire.
-          </p>
-          <a
-            href="#contact"
-            className="inline-block px-8 py-4 bg-accent hover:bg-accent-hover text-white font-medium text-base rounded-md transition-colors"
-          >
-            Book a tour
-          </a>
+        <div className="mt-20 text-center p-16 bg-gradient-to-b from-surface to-paper rounded-2xl border border-ivory/5 relative overflow-hidden">
+          <div className="absolute inset-0 bg-accent/5"></div>
+          <div className="relative z-10">
+            <h3 className="font-display text-4xl text-ivory mb-6 font-bold">Ready to Elevate Your Standard?</h3>
+            <p className="text-muted text-lg mb-10 max-w-2xl mx-auto">
+              Join the ranks of those who have already claimed their power at Fitness Empire. Your evolution starts today.
+            </p>
+            <a
+              href="#contact"
+              className="inline-block px-10 py-5 bg-accent hover:bg-accent-hover text-ivory font-semibold tracking-wider uppercase text-sm rounded transition-all duration-300 shadow-[0_0_20px_rgba(217,119,6,0.3)] hover:shadow-[0_0_30px_rgba(217,119,6,0.5)] transform hover:-translate-y-1"
+            >
+              Secure Your Spot
+            </a>
+          </div>
         </div>
       </div>
     </section>
